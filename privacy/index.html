@@ -85,7 +85,7 @@
     <li>If you enabled health integration: a snapshot of today's health metrics (see section 4)</li>
     <li>If you enabled calendar integration: today's and upcoming calendar events and reminders (see section 5)</li>
   </ul>
-  <p><strong>Our backend keeps no copy of your conversations.</strong> It is a relay hosted on <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a> that authenticates your device, applies rate limits, and forwards your request over encrypted connections (TLS). The only content it holds is a temporary buffer of an in-flight response for up to about one hour, so a reply isn't lost if the app is suspended mid-request; after that it is deleted. Standard, short-lived infrastructure logs (such as request metadata) may exist at Cloudflare as with any web service.</p>
+  <p><strong>Our backend keeps no copy of your conversations.</strong> It is a relay hosted on <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a> that authenticates your device, applies rate limits, and forwards your request over encrypted connections (TLS). Standard, short-lived infrastructure logs (such as request metadata) may exist at Cloudflare as with any web service.</p>
   <p><strong>Anthropic processes your messages to generate the coach's replies.</strong> Under Anthropic's commercial API terms, API inputs and outputs are not used to train Anthropic's models and are retained by Anthropic only for a limited period for trust-and-safety purposes. See <a href="https://www.anthropic.com/legal/privacy">Anthropic's privacy policy</a>.</p>
 
   <h2>4. Health data (Apple HealthKit)</h2>
@@ -111,7 +111,7 @@
   <ul>
     <li><strong>On your device:</strong> data persists until you delete it in the app or delete the app itself. Full chat transcripts are pruned to daily summaries after 7 days automatically.</li>
     <li><strong>In your iCloud:</strong> remove synced data via iOS Settings&nbsp;→ your name&nbsp;→ iCloud&nbsp;→ Manage Account Storage, or by deleting the app data from iCloud.</li>
-    <li><strong>On our servers:</strong> nothing to delete — we store no conversations or personal content. Transient response buffers expire within about an hour; anonymous rate-limit counters reset daily.</li>
+    <li><strong>On our servers:</strong> nothing to delete — we store no conversations or personal content. Anonymous rate-limit counters reset daily.</li>
   </ul>
 
   <h2>11. What we never do</h2>
