@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Theia</title>
+<meta name="description" content="Privacy policy for Theia, the AI-powered personal chief of staff for iPhone.">
+<style>
+  :root {
+    --bg: #faf8f4;
+    --text: #2b2823;
+    --muted: #6f6a60;
+    --accent: #a07c2c;
+    --border: #e8e3d8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17161a;
+      --text: #ece9e2;
+      --muted: #a39d90;
+      --accent: #d4af5a;
+      --border: #34323a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 3.5rem 1.5rem 3rem; }
+  h1 { font-size: 2rem; margin: 0 0 0.3rem; letter-spacing: -0.02em; }
+  .meta { color: var(--muted); margin: 0 0 2.5rem; }
+  h2 { font-size: 1.3rem; margin: 2.4rem 0 0.7rem; }
+  h3 { font-size: 1.05rem; margin: 1.6rem 0 0.5rem; }
+  p, li { margin: 0 0 0.9rem; }
+  li { margin-bottom: 0.4rem; }
+  a { color: var(--accent); }
+  .summary {
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 1rem 1.3rem;
+    margin: 0 0 2rem;
+  }
+  .summary p { margin: 0.3rem 0; }
+  footer {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Privacy Policy</h1>
+  <p class="meta">Theia — Your Personal Chief of Staff · Effective July 11, 2026</p>
+
+  <div class="summary">
+    <p><strong>The short version:</strong></p>
+    <p>Theia has no accounts and no sign-up. Your data lives on your device and in your own private iCloud. When you talk to your coach, your message and relevant context are processed by Anthropic's Claude through our secure backend — and not stored on our servers. We never sell data, never show ads, and never track you across apps. Health and Screen Time data are never used for advertising or shared with data brokers.</p>
+  </div>
+
+  <p>This policy explains what data Theia ("the app," "we") handles, where it goes, and the choices you have. Theia is designed so that we — the developer — hold as little of your data as technically possible.</p>
+
+  <h2>1. No accounts, no sign-up</h2>
+  <p>Theia does not require registration and we do not maintain user accounts, email lists, or server-side user profiles. We cannot look up "your data" on our systems, because there is no such record.</p>
+
+  <h2>2. Data stored on your device and in your iCloud</h2>
+  <p>Everything you create in Theia — goals, habits, reminders, important dates, long-term goals, coach conversations, and your profile preferences — is stored locally on your iPhone and synced through <strong>your private iCloud database</strong> (Apple CloudKit), under your own Apple&nbsp;ID. This sync is end-to-user: the data is accessible to you and to Apple's iCloud infrastructure under <a href="https://www.apple.com/legal/privacy/">Apple's privacy terms</a>, not to us. We have no server that stores a copy of your content.</p>
+  <p>To reduce what's kept even on your own device, full coach chat transcripts older than 7 days are automatically deleted and replaced with short daily summaries.</p>
+
+  <h2>3. AI coaching — what is sent, where, and for how long</h2>
+  <p>Theia's coach is powered by Claude, an AI model by <a href="https://www.anthropic.com/legal/privacy">Anthropic</a>. When you send the coach a message (or the coach prepares your daily briefing), the app sends the following to our backend, which forwards it to Anthropic's API for processing:</p>
+  <ul>
+    <li>Your recent coach messages and short summaries of prior days' conversations</li>
+    <li>Your current goals, habits, reminders, backlog, and important dates</li>
+    <li>The personal context you chose to share in your profile</li>
+    <li>If you enabled health integration: a snapshot of today's health metrics (see section 4)</li>
+    <li>If you enabled calendar integration: today's and upcoming calendar events and reminders (see section 5)</li>
+  </ul>
+  <p><strong>Our backend keeps no copy of your conversations.</strong> It is a relay hosted on <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a> that authenticates your device, applies rate limits, and forwards your request over encrypted connections (TLS). The only content it holds is a temporary buffer of an in-flight response for up to about one hour, so a reply isn't lost if the app is suspended mid-request; after that it is deleted. Standard, short-lived infrastructure logs (such as request metadata) may exist at Cloudflare as with any web service.</p>
+  <p><strong>Anthropic processes your messages to generate the coach's replies.</strong> Under Anthropic's commercial API terms, API inputs and outputs are not used to train Anthropic's models and are retained by Anthropic only for a limited period for trust-and-safety purposes. See <a href="https://www.anthropic.com/legal/privacy">Anthropic's privacy policy</a>.</p>
+
+  <h2>4. Health data (Apple HealthKit)</h2>
+  <p>Health integration is <strong>off by default</strong> and entirely optional. If you turn it on, Theia reads only the categories you enable — sleep, steps, exercise minutes, water intake, resting heart rate, mindfulness minutes, and workouts — and only in <strong>read-only</strong> form; Theia never writes to your health records.</p>
+  <p>Health data is used for exactly one purpose: giving your coach context to provide better guidance (for example, noticing you slept poorly before suggesting your day plan). A daily snapshot is included in coach requests as described in section 3. Health data is <strong>never stored on our servers, never used for advertising or marketing, never used for data mining unrelated to the app's health features, and never sold or disclosed to third parties</strong> beyond the transient AI processing described above. You can disable any category, or all health access, at any time in the app's settings or in iOS Settings&nbsp;→ Health&nbsp;→ Data Access &amp; Devices.</p>
+
+  <h2>5. Calendar and reminders (Apple EventKit)</h2>
+  <p>Calendar integration is optional. If enabled, Theia reads events from the calendars you select and your iOS reminders to give the coach an accurate picture of your day. This data is included in coach requests as described in section 3, is not stored on our servers, and is never used for any purpose other than coaching. You can revoke access anytime in iOS Settings&nbsp;→ Privacy &amp; Security&nbsp;→ Calendars / Reminders.</p>
+
+  <h2>6. Screen Time (Family Controls)</h2>
+  <p>If you use Theia's focus shields, the app uses Apple's Screen Time (Family Controls) framework to limit the apps you choose. This data <strong>never leaves your device</strong>. Apple's framework is designed so that your app selections are opaque even to Theia itself — we cannot see which apps you shield or how you use them, and nothing about your Screen Time is transmitted to us, to Anthropic, or to anyone else.</p>
+
+  <h2>7. Analytics</h2>
+  <p>Theia uses <a href="https://telemetrydeck.com/privacy/">TelemetryDeck</a>, a privacy-focused analytics service, to understand which features are used so we can improve the app. These signals are anonymized (identifiers are irreversibly hashed), contain <strong>no message content, no health data, and no personal information</strong>, and are never used to track you across apps or websites. Theia does not use advertising SDKs and does not perform cross-app tracking as defined by Apple's App Tracking Transparency.</p>
+
+  <h2>8. Device authentication</h2>
+  <p>To keep our AI backend secure and abuse-free without accounts, Theia uses Apple's App Attest to prove to our server that requests come from a genuine copy of the app. This creates an anonymous, hardware-backed key identifier used solely for authentication and per-device rate limiting. It contains no personal information and cannot be linked to your identity by us.</p>
+
+  <h2>9. Notifications</h2>
+  <p>Theia sends local notifications (reminders and check-ins you configure) and receives silent push notifications used only to keep your iCloud data in sync across your devices. We do not send marketing push notifications.</p>
+
+  <h2>10. Data retention and deletion</h2>
+  <ul>
+    <li><strong>On your device:</strong> data persists until you delete it in the app or delete the app itself. Full chat transcripts are pruned to daily summaries after 7 days automatically.</li>
+    <li><strong>In your iCloud:</strong> remove synced data via iOS Settings&nbsp;→ your name&nbsp;→ iCloud&nbsp;→ Manage Account Storage, or by deleting the app data from iCloud.</li>
+    <li><strong>On our servers:</strong> nothing to delete — we store no conversations or personal content. Transient response buffers expire within about an hour; anonymous rate-limit counters reset daily.</li>
+  </ul>
+
+  <h2>11. What we never do</h2>
+  <ul>
+    <li>We never sell your data.</li>
+    <li>We never show ads or share data with advertisers or data brokers.</li>
+    <li>We never use health, calendar, or conversation data for marketing.</li>
+    <li>We never track you across other apps or websites.</li>
+  </ul>
+
+  <h2>12. Service providers</h2>
+  <ul>
+    <li><strong>Anthropic</strong> (USA) — AI processing of coach conversations. <a href="https://www.anthropic.com/legal/privacy">Privacy policy</a></li>
+    <li><strong>Cloudflare</strong> (USA) — hosting of our backend relay. <a href="https://www.cloudflare.com/privacypolicy/">Privacy policy</a></li>
+    <li><strong>Apple</strong> — iCloud sync, App Attest, push notifications. <a href="https://www.apple.com/legal/privacy/">Privacy policy</a></li>
+    <li><strong>TelemetryDeck</strong> (Germany) — anonymized product analytics. <a href="https://telemetrydeck.com/privacy/">Privacy policy</a></li>
+  </ul>
+
+  <h2>13. Children</h2>
+  <p>Theia is not directed at children under 13, and we do not knowingly collect personal information from children.</p>
+
+  <h2>14. Changes to this policy</h2>
+  <p>If we change how Theia handles data, we will update this page and revise the effective date above. Material changes will be highlighted in the app's release notes.</p>
+
+  <h2>15. Contact</h2>
+  <p>Questions or requests about privacy: <a href="mailto:gwangshopping18@gmail.com">gwangshopping18@gmail.com</a>.</p>
+
+  <footer>
+    <p><a href="/">Home</a> · <a href="mailto:gwangshopping18@gmail.com">Contact</a></p>
+    <p>© 2026 Theia. All rights reserved.</p>
+  </footer>
+</div>
+</body>
+</html>
